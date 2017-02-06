@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD OPERATIONS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="library/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<script src="library/bootstrap.js"></script>
+    <script src="library/bootstrap.min.js"></script>
+</head>
+<body id="bd">
+<div class="container" id="main">
+<h2>    Add your details here    </h2>
+<!--Form which takes details from the user -->
+<div class="fm">
+<p>Name:<input type="text"   id="name"></p><br>
+<p>Age:<input type="text"  id="age"></p><br>
+<p>Gender:<input type="text"  id="gender"></p><br>
+<p>Company:<input type="text" id="company"></p><br>
+<p>Email:<input type="text"  id="email"></p><br>
+</div>
+<button id="add-profile"> ADD!</button>
+<!-- Template which is added to mustache js-->
+<template id="profile-template">
+	<tr>
+	<td><input class="id1" value="{{id}}"></td>
+	<td><input class="name1" value="{{name}}"></td>
+	<td><input class="age1" value="{{age}}"></td>
+	<td><input class="gender1" value="{{gender}}"></td>
+	<td><input class="email1" value="{{email}}"></td>
+	<td><input class="company1" value="{{company}}"></td>
+	</tr> 
+</template>
+<table id="tb" border="1" class="table-responsive" style="margin-left:30px;">
+	 <tr >
+	 	<th>
+	 		Id
+	 	</th>
+	 	<th>
+	 		Name
+	 	</th>
+	 	<th>
+	 		Age
+	 	</th>
+	 	<th>
+	 		Email
+	 	</th>
+	 	<th>
+	 		company
+	 	</th>
+	 	<th colspan="3">
+	 		action
+	 	</th>
+	 </tr>
+</table>
+</div>
+<!--End of container div tags-->
+<script src="library/jquery.js"></script>
+<script src="logic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+</body>
+</html>
